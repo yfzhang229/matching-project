@@ -32,6 +32,14 @@ def from_mtx(mtx):
             G[mtx.col[k]].add(mtx.row[k])
     return G
 
+def num_edge(G):
+    '''Compute the number of edges in G'''
+    num = 0
+    for v in G:
+        num += len(G[v])
+    
+    return num / 2
+
 class union_find:
     '''Union Find structure'''
     def __init__(self):

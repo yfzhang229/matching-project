@@ -150,17 +150,6 @@ def find_max_matching(G):
                                 return path
                             s = pred[u]
                         
-#                        if s == t:
-#                            return [s]
-#                        
-#                        elif label[s] == EVEN:
-#                            return [s, mate[s]] + find_path(pred[mate[s]], t)
-#                        else:
-#                            v, w = bridge[s]
-#                            vs = find_path(v, mate[s])
-#                            vs.reverse()
-#                            return [s] + vs + find_path(w, t)
-                        
                     return [w] + find_path(v)
                         
                     
