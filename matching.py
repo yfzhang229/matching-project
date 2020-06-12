@@ -244,5 +244,5 @@ if __name__ == "__main__":
 #    mtx = mmread('graphs/poli.mtx')
     G = from_mtx(mtx)
     mate = find_max_matching(G)
-    print(f'The size of maximum cardinality matching is {card_matching(mate)}, is matching: {is_matching(G, mate)}')
+    print(f'The size of maximum cardinality matching is {card_matching(mate)}')
                 
