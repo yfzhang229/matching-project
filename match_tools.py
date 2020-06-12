@@ -8,6 +8,13 @@ Created on Thu May 21 01:12:12 2020
 
 import os
 
+def num_edges(G):
+    '''Compute the number of edges in G'''
+    num = 0
+    for v in G:
+        num += len(G[v])
+    return num / 2
+
 def get_file_paths(directory='graphs'):
     file_paths = []
     for directory, _, files in os.walk(directory):
@@ -32,13 +39,7 @@ def from_mtx(mtx):
             G[mtx.col[k]].add(mtx.row[k])
     return G
 
-def num_edge(G):
-    '''Compute the number of edges in G'''
-    num = 0
-    for v in G:
-        num += len(G[v])
-    
-    return num / 2
+
 
 class union_find:
     '''Union Find structure'''

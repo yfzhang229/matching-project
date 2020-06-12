@@ -151,9 +151,6 @@ def find_max_matching(G):
                             s = pred[u]
                         
                     return [w] + find_path(v)
-                        
-                    
-                
                 
                 vb = pnode[v]
                 wb = pnode[w]
